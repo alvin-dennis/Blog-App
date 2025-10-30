@@ -7,7 +7,7 @@
         "date-fns": "^3.6.0",
         "gray-matter": "^4.0.3",
         "next": "15.0.2",
-        "react": "19.0.0-rc-02c0e824-20241028",
+        "react": "19.2.0",
         "react-dom": "19.0.0-rc-02c0e824-20241028",
         "remark": "^15.0.1",
         "remark-html": "^16.0.1",
@@ -398,7 +398,7 @@
 
     "queue-microtask": ["queue-microtask@1.2.3", "", {}, "sha512-NuaNSa6flKT5JaSYQzJok04JzTL1CA6aGhv5rfLW3PgqA+M2ChpZQnAC8h8i4ZFkBS8X5RqkDBHA7r4hej3K9A=="],
 
-    "react": ["react@19.0.0-rc-02c0e824-20241028", "", {}, "sha512-GbZ7hpPHQMiEu53BqEaPQVM/4GG4hARo+mqEEnx4rYporDvNvUjutiAFxYFSbu6sgHwcr7LeFv8htEOwALVA2A=="],
+    "react": ["react@19.2.0", "", {}, "sha512-tmbWg6W31tQLeB5cdIBOicJDJRR2KzXsV7uSK9iNfLWQ5bIZfxuPEHp7M8wiHyHnn0DD1i7w3Zmin0FtkrwoCQ=="],
 
     "react-dom": ["react-dom@19.0.0-rc-02c0e824-20241028", "", { "dependencies": { "scheduler": "0.25.0-rc-02c0e824-20241028" }, "peerDependencies": { "react": "19.0.0-rc-02c0e824-20241028" } }, "sha512-LrZf3DfHL6Fs07wwlUCHrzFTCMM19yA99MvJpfLokN4I2nBAZvREGZjZAn8VPiSfN72+i9j1eL4wB8gC695F3Q=="],
 
