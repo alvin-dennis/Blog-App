@@ -12,7 +12,6 @@ import { getPosts } from "@/lib/api";
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [posts, setPosts] = useState<Post[]>([]);
-  const pathname = "/";
 
   useEffect(() => {
     async function fetchPosts() {
@@ -97,11 +96,7 @@ export default function Navbar() {
                   {href ? (
                     <Link
                       href={href}
-                      className={`text-base font-medium px-3 py-2 rounded-xl w-full text-center transition-all duration-200 ${
-                        pathname === href
-                          ? "bg-gray-200 text-gray-900"
-                          : "text-gray-700 hover:text-gray-900 hover:bg-gray-100"
-                      }`}
+                      className="text-base font-medium px-3 py-2 rounded-xl w-full text-center transition-all duration-200"
                       onClick={() => setIsOpen(false)}
                     >
                       {label}
