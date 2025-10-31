@@ -34,8 +34,6 @@ export default async function PostPage({ params }: PostPageProps) {
 
   return (
     <main className="min-h-screen bg-white">
-      <Navbar />
-
       <div className="relative h-96 bg-gray-100">
         <Image
           src={post.image || "/placeholder.svg"}

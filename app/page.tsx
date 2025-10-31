@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { getPosts } from "@/lib/api";
-import Navbar from "@/components/Navbar";
 import FeaturedPost from "@/components/Featured";
 import BlogCard from "@/components/BlogCard";
 import PostsList from "@/components/PostsList";
@@ -14,7 +13,6 @@ export default async function Home() {
 
   return (
     <main className="min-h-screen bg-white">
-      <Navbar />
       <section className="px-6 py-12">
         <div className="mx-auto max-w-7xl">
           <div className="grid gap-8 lg:grid-cols-3">
