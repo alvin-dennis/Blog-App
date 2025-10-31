@@ -12,7 +12,7 @@ export default async function Home() {
   const otherPosts = posts.slice(1, 6);
 
   return (
-    <main className="min-h-screen bg-white">
+    <main className="min-h-screen ">
       <section className="px-6 py-12">
         <div className="mx-auto max-w-7xl">
           <div className="grid gap-8 lg:grid-cols-3">

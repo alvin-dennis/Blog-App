@@ -83,7 +83,7 @@ export default function Navbar() {
           onClick={() => setIsOpen(false)}
         >
           <nav
-            className="absolute right-4 top-16 bg-white/90 rounded-2xl shadow-2xl p-6 w-72 border border-gray-100 backdrop-blur"
+            className="absolute right-4 top-16 /90 rounded-2xl shadow-2xl p-6 w-72 border border-gray-100 backdrop-blur"
             onClick={(e) => e.stopPropagation()}
           >
             <div className="block md:hidden w-full mb-4">

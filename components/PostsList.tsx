@@ -14,7 +14,7 @@ export default function PostsList({ posts }: { posts: Post[] }) {
               <div className="flex gap-3 group cursor-pointer">
                 <div className="relative h-20 w-20 shrink-0 rounded-md overflow-hidden bg-gray-100">
                   <Image
-                    src={post.image || "/placeholder.svg"}
+                    src={post.image}
                     alt={post.title}
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-300"
@@ -27,7 +27,7 @@ export default function PostsList({ posts }: { posts: Post[] }) {
                 </div>
               </div>
             </Link>
-              <Separator className="border-gray-200 mt-2" />
+            <Separator className="border-gray-200 mt-2" />
           </div>
         ))}
       </div>

@@ -10,7 +10,7 @@ export default function FeaturedPost({ post }: { post: Post }) {
     <Link href={`/blog/${post.id}`}>
       <div className="relative overflow-hidden rounded-2xl group cursor-pointer h-140">
         <Image
-          src={post.image || "/placeholder.svg"}
+          src={post.image}
           alt={post.title}
           fill
           className="object-cover group-hover:scale-105 transition-transform duration-300"

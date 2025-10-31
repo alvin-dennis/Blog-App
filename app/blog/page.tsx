@@ -5,7 +5,7 @@ export default async function BlogPage() {
   const posts = await getPosts();
 
   return (
-    <main className="min-h-screen bg-white">
+    <main className="min-h-screen ">
       <section>
         <div className="mx-auto max-w-7xl px-6 py-12">
           <h1 className="text-4xl font-bold mb-2">All Blog Posts</h1>

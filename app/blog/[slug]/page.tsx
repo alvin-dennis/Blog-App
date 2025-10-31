@@ -33,10 +33,10 @@ export default async function PostPage({ params }: PostPageProps) {
   const tags = post.tags?.split(",") || [];
 
   return (
-    <main className="min-h-screen bg-white">
+    <main className="min-h-screen ">
       <div className="relative h-96 bg-gray-100">
         <Image
-          src={post.image || "/placeholder.svg"}
+          src={post.image}
           alt={post.title}
           fill
           className="object-cover"
@@ -52,10 +52,7 @@ export default async function PostPage({ params }: PostPageProps) {
           <h1 className="text-4xl font-bold mb-6">{post.title}</h1>
           <div className="mb-8 pb-8 border-b border-gray-200 flex items-center gap-4">
             <Avatar>
-              <AvatarImage
-                src={post.avatar || "/placeholder.svg"}
-                alt={post.name}
-              />
+              <AvatarImage src={post.avatar} alt={post.name} />
               <AvatarFallback>{post.name.charAt(0)}</AvatarFallback>
             </Avatar>
             <div>
@@ -100,10 +97,10 @@ export default async function PostPage({ params }: PostPageProps) {
           <div className="grid gap-6 md:grid-cols-3">
             {relatedPosts.map((relatedPost) => (
               <Link key={relatedPost.id} href={`/blog/${relatedPost.id}`}>
-                <div className="group overflow-hidden rounded-lg bg-white border border-gray-200 hover:border-gray-300 transition-all hover:shadow-md cursor-pointer h-full">
+                <div className="group overflow-hidden rounded-lg  border border-gray-200 hover:border-gray-300 transition-all hover:shadow-md cursor-pointer h-full">
                   <div className="relative h-40 overflow-hidden bg-gray-100">
                     <Image
-                      src={relatedPost.image || "/placeholder.svg"}
+                      src={relatedPost.image}
                       alt={relatedPost.title}
                       fill
                       className="object-cover group-hover:scale-105 transition-transform duration-300"

@@ -56,7 +56,7 @@ export default function SearchBar({ posts }: SearchPostsProps) {
       </div>
 
       {isOpen && searchQuery && (
-        <div className="absolute top-full left-0 right-0 mt-2 bg-white border border-gray-200 rounded-lg shadow-lg z-50 max-h-96 overflow-y-auto">
+        <div className="absolute top-full left-0 right-0 mt-2  border border-gray-200 rounded-lg shadow-lg z-50 max-h-96 overflow-y-auto">
           {filteredPosts.length > 0 ? (
             <div className="divide-y">
               {filteredPosts.map((post) => (
@@ -70,7 +70,7 @@ export default function SearchBar({ posts }: SearchPostsProps) {
                   className="px-4 py-3 hover:bg-gray-50 transition-colors flex gap-3"
                 >
                   <img
-                    src={post.image || "/placeholder.svg"}
+                    src={post.image}
                     alt={post.title}
                     className="w-12 h-12 rounded object-cover shrink-0"
                   />

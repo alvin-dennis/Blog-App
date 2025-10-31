@@ -5,13 +5,13 @@ import type { Post } from "@/lib/types";
 
 export default function BlogCard({ post }: { post: Post }) {
   const readTime = Math.ceil(post.body.split(" ").length / 200);
-  
+
   return (
     <Link href={`/blog/${post.id}`}>
       <div className="group overflow-hidden transition-all rounded-xl hover:shadow-md cursor-pointer">
         <div className="relative h-48 overflow-hidden bg-gray-100">
           <Image
-            src={post.image || "/placeholder.svg"}
+            src={post.image}
             alt={post.title}
             fill
             className="object-cover group-hover:scale-105 rounded-xl transition-transform duration-300"
@@ -27,10 +27,7 @@ export default function BlogCard({ post }: { post: Post }) {
 
           <div className="flex items-center gap-3">
             <Avatar className="h-8 w-8">
-              <AvatarImage
-                src={post.avatar || "/placeholder.svg"}
-                alt={post.name}
-              />
+              <AvatarImage src={post.avatar} alt={post.name} />
               <AvatarFallback>{post.name.charAt(0)}</AvatarFallback>
             </Avatar>
             <div className="flex items-center gap-2 text-xs text-gray-600">
