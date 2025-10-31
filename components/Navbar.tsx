@@ -1,15 +1,30 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Menu, X } from "lucide-react";
 import { navLinks } from "@/lib/data";
+import { Post } from "@/lib/types";
+import { Menu, X } from "lucide-react";
+import SearchBar from "@/components/Search";
+import { getPosts } from "@/lib/api";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const [posts, setPosts] = useState<Post[]>([]);
   const pathname = "/";
+
+  useEffect(() => {
+    async function fetchPosts() {
+      try {
+        const data = await getPosts();
+        setPosts(data);
+      } catch (err) {
+        console.error("Failed to fetch posts:", err);
+      }
+    }
+    fetchPosts();
+  }, []);
 
   return (
     <header className="sticky top-0 z-50 bg-white">
@@ -23,11 +38,7 @@ export default function Navbar() {
           </Link>
 
           <div className="relative hidden sm:block">
-            <Input
-              type="text"
-              placeholder="Search..."
-              className="border border-gray-300 rounded-md py-1 px-3 text-sm focus:outline-none focus:ring-2 focus:ring-black"
-            />
+            <SearchBar posts={posts} />
           </div>
         </div>
 
@@ -77,12 +88,9 @@ export default function Navbar() {
             onClick={(e) => e.stopPropagation()}
           >
             <div className="block md:hidden w-full mb-4">
-              <Input
-                type="text"
-                placeholder="Search..."
-                className="border border-gray-300 rounded-md py-1 px-3 text-sm focus:outline-none focus:ring-2 focus:ring-black"
-              />
+              <SearchBar posts={posts} />
             </div>
+
             <ul className="flex flex-col items-center gap-6">
               {navLinks.map(({ label, href }) => (
                 <li key={label} className="w-full">

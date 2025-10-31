@@ -3,8 +3,6 @@ import type { Post } from "@/lib/types";
 const apiUrl = process.env.NEXT_PUBLIC_API_URL;
 
 export async function getPosts(): Promise<Post[]> {
-  "use cache";
-
   if (!apiUrl) {
     throw new Error(
       "NEXT_PUBLIC_URL environment variable is not set. Please configure your API endpoint in the Vars section."
