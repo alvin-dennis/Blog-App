@@ -5,16 +5,16 @@ import type { Post } from "@/lib/types";
 
 export default function BlogCard({ post }: { post: Post }) {
   const readTime = Math.ceil(post.body.split(" ").length / 200);
-
+  
   return (
     <Link href={`/blog/${post.id}`}>
-      <div className="group overflow-hidden rounded-lg bg-white border border-gray-200 hover:border-gray-300 transition-all hover:shadow-md cursor-pointer">
+      <div className="group overflow-hidden transition-all rounded-xl hover:shadow-md cursor-pointer">
         <div className="relative h-48 overflow-hidden bg-gray-100">
           <Image
             src={post.image || "/placeholder.svg"}
             alt={post.title}
             fill
-            className="object-cover group-hover:scale-105 transition-transform duration-300"
+            className="object-cover group-hover:scale-105 rounded-xl transition-transform duration-300"
           />
         </div>
         <div className="p-5">

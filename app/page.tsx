@@ -4,6 +4,7 @@ import Navbar from "@/components/Navbar";
 import FeaturedPost from "@/components/Featured";
 import BlogCard from "@/components/BlogCard";
 import PostsList from "@/components/PostsList";
+import { Button } from "@/components/ui/button";
 
 export default async function Home() {
   const posts = await getPosts();
@@ -26,15 +27,14 @@ export default async function Home() {
           </div>
         </div>
       </section>
-      <section className="px-6 py-12 bg-gray-50">
+      <section className="px-6 py-12">
         <div className="mx-auto max-w-7xl">
           <div className="mb-8 flex items-center justify-between">
             <h2 className="text-3xl font-bold">Recent Posts</h2>
-            <Link
-              href="/blog"
-              className="text-sm font-medium text-foreground hover:underline"
-            >
-              All Posts
+            <Link href="/blog">
+              <Button variant="outline" className="text-sm font-medium">
+                All Posts
+              </Button>
             </Link>
           </div>
 
